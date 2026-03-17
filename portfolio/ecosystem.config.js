@@ -1,7 +1,6 @@
 // PM2 Ecosystem Config — DonPortfolio (sandeep.verbaflowllc.com)
-// Deploy path: /home/senpai/portfolio
+// Deploy path: /var/www/portfolio
 // Run: pm2 start ecosystem.config.js --only portfolio
-
 
 module.exports = {
   apps: [
@@ -9,8 +8,7 @@ module.exports = {
       name: 'portfolio',
       script: 'node_modules/.bin/next',
       args: 'start',
-      cwd: '/home/senpai/portfolio',
-
+      cwd: '/var/www/portfolio/portfolio',
 
       // Port 3001 — Cloudflare Tunnel routes sandeep.verbaflowllc.com here
       env: {
@@ -29,10 +27,9 @@ module.exports = {
       restart_delay: 3000,
 
       // Logging
-      error_file: './logs/pm2-error.log',
-      out_file: './logs/pm2-out.log',
+      error_file: '/var/log/pm2/portfolio-error.log',
+      out_file: '/var/log/pm2/portfolio-out.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-
       merge_logs: true,
 
       // Zero-downtime reload
