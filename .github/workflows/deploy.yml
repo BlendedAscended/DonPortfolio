@@ -46,10 +46,9 @@ jobs:
           script: |
             set -e
             echo "━━━ Deploying Portfolio ━━━"
-            cd /home/senpai/portfolio
+            cd /var/www/portfolio
 
             git fetch origin main
-
             git reset --hard origin/main
 
             # Navigate to app directory
