@@ -39,3 +39,8 @@ portfolio/build/
 portfolio/.vercel/
 portfolio/*.tsbuildinfo
 portfolio/next-env.d.ts
+*.backup
+__pycache__/
+*.pyc
+*.pyo
+.claude/fix-journal.jsonl
