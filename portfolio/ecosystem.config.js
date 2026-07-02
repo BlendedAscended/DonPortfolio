@@ -1,4 +1,4 @@
-// PM2 Ecosystem Config — DonPortfolio (sandeep.verbaflowllc.com)
+// PM2 Ecosystem Config — DonPortfolio (sandeep.veldonlab.com)
 // Deploy path: /var/www/portfolio
 // Run: pm2 start ecosystem.config.js --only portfolio
 
@@ -10,7 +10,7 @@ module.exports = {
       args: 'start',
       cwd: '/var/www/portfolio/portfolio',
 
-      // Port 3001 — Cloudflare Tunnel routes sandeep.verbaflowllc.com here
+      // Port 3001 — Cloudflare Tunnel routes sandeep.veldonlab.com here
       env: {
         NODE_ENV: 'production',
         PORT: 3001,

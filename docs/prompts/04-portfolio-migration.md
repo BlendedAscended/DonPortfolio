@@ -237,7 +237,7 @@ See `portfolio/DEPLOYMENT.md` for full step-by-step instructions:
 1. Push repo to GitHub
 2. Add GitHub Secrets
 3. SSH into Hetzner → clone to `/var/www/portfolio` → `pm2 start ecosystem.config.js`
-4. Add Cloudflare Tunnel route: `sandeep.verbaflowllc.com → localhost:3001`
+4. Add Cloudflare Tunnel route: `sandeep.veldonlab.com → localhost:3001`
 
 ---
 

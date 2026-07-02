@@ -1,11 +1,11 @@
 # DonPortfolio — Deployment Guide
-## sandeep.verbaflowllc.com → Hetzner + Cloudflare Tunnel
+## sandeep.veldonlab.com → Hetzner + Cloudflare Tunnel
 
 ---
 
 ## Project Overview
 
-- **Domain**: `sandeep.verbaflowllc.com`
+- **Domain**: `sandeep.veldonlab.com`
 - **Framework**: Next.js 16 (App Router)
 - **Port on Hetzner**: `3001`
 - **Deployment**: Hetzner Cx22 → PM2 → Cloudflare Tunnel
@@ -84,7 +84,7 @@ On your Hetzner server (already authenticated via `cloudflared tunnel login`):
 
 ```bash
 # Add sandeep subdomain to existing tunnel
-cloudflared tunnel route dns verbaflow-main sandeep.verbaflowllc.com
+cloudflared tunnel route dns verbaflow-main sandeep.veldonlab.com
 ```
 
 This creates:
@@ -94,7 +94,7 @@ CNAME  sandeep  →  <TUNNEL_ID>.cfargotunnel.com  (Proxied)
 
 And update `~/.cloudflared/config.yml` to include:
 ```yaml
-  - hostname: sandeep.verbaflowllc.com
+  - hostname: sandeep.veldonlab.com
     service: http://localhost:3001
     originRequest:
       noTLSVerify: true
@@ -206,11 +206,11 @@ If you add Sanity, analytics, or contact form later, add to `.env.local`:
 After deployment, check:
 ```bash
 # From local machine
-dig sandeep.verbaflowllc.com
+dig sandeep.veldonlab.com
 # Should return CNAME → <tunnel-id>.cfargotunnel.com
 
 # From Hetzner
-curl -I https://sandeep.verbaflowllc.com
+curl -I https://sandeep.veldonlab.com
 # Should return HTTP/2 200
 ```
 
@@ -240,4 +240,4 @@ If you add Sanity CMS for blog/content to the portfolio:
    NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
    ```
 3. Add to GitHub Secrets so CI/CD includes it in build
-4. Consider: **separate Sanity project** from verbaflowllc (different content space)
+4. Consider: **separate Sanity project** from veldonlab (different content space)
