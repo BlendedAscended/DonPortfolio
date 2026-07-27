@@ -10,7 +10,7 @@
 ### 1. Full File Tree (3 levels deep)
 
 ```
-/Users/sandeep/Desktop/Project26/Agents/DonPortfolio/portfolio/
+/Users/sandeep/Projects/Project26/Agents/DonPortfolio/portfolio/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml
