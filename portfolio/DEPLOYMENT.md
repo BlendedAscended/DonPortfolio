@@ -19,7 +19,7 @@
 ### Step 1 — Initialize Git Repo
 
 ```bash
-cd /Users/sandeep/Desktop/Project26/Agents/DonPortfolio/portfolio
+cd /Users/sandeep/Projects/Project26/Agents/DonPortfolio/portfolio
 
 git init
 git add .
